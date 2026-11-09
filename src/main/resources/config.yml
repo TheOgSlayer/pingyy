@@ -1,0 +1,31 @@
+# PingPlugin configuration
+# Run /pingreload after editing this file (no restart needed).
+#
+# Formats use MiniMessage: https://docs.advntr.dev/minimessage/format.html
+#   Colors:     <white>  <red>  <#ff0000>
+#   Styles:     <bold>  <italic>  <underlined>
+#   Gradients:  <gradient:#00a2ff:#00ffaa>text</gradient>
+#
+# Placeholders you can use in the formats:
+#   {ping}    the ping number
+#   {player}  the player's name
+#   {accent}  the accent color set below (use as a tag, e.g. <{accent}>)
+
+# Main highlight color for the ping number (hex, e.g. #00a2ff, or a name like aqua)
+accent-color: "#00a2ff"
+
+messages:
+  # Shown for /ping
+  self: "<white>Your ping is <{accent}>{ping}<white> ms"
+
+  # Shown for /ping <player>
+  other: "<white>{player} has a ping of <{accent}>{ping}<white> ms"
+
+  # Error messages
+  console-usage: "<red>Usage: /ping <player>"
+  no-permission: "<red>You don't have permission to do that."
+  # Player has never joined the server
+  user-not-found: "<red>User '{player}' not found"
+  # Player has joined before but is offline right now
+  player-offline: "<red>{player} is not online"
+  reloaded: "<green>PingPlugin config reloaded."
